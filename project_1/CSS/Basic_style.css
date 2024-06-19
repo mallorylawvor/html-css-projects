@@ -13,12 +13,12 @@ h1 {
     height: 450px;
     background-color: #faebd7;
     border: 2px solid black;
-    border-radius: 54;
+    border-radius: 5%;
 }
 /*--- Select all sqaures in the array----*/
 
-.container.squares:nth-child(-n+4){
-    background-image:url("Images/Icons/icons_2.png");
+.container .squares:nth-child(-n+4){
+    background-image: url("../Images/Icons/icons_1.png");
     color:#fff;
     float:left;
     width:100px;
@@ -27,7 +27,7 @@ h1 {
     border:1px solid black;
     border-radius:25%;
     cursor:pointer;
-    transition:.5s ease-in-out;
+    transition: transform .5s ease-in-out;
 }
 
 /*--Slecect all square paragphas in the array--*/
@@ -38,7 +38,7 @@ h1 {
     font-weight: 900;
     text-align: center;
     margin: 0;
-    tesxt-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 /*--Individually selcect a square in hre array--*/
@@ -57,13 +57,13 @@ h1 {
 }
 
 /*---Hover, Translate & Transform Effecs--*/
-.container.squares:nth-child(-n+4):hover{
-    background-image: url("Images/Icons/icons_1.png");
+.container .squares:nth-child(-n+4):hover{
+    background-image: url("../Images/Icons/icons_1.png");
     transform: scale(.5);
     animation-name: race;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(2.5, .2, .3, 2);
+    animation-timing-function: cubic-bezier(2.5, .2, .3, .2);
 }
 .squares:nth-child(1):hover{
     background: #13b4ff;
@@ -81,7 +81,7 @@ h1 {
 @keyframes race {
     0%, 100% {
         transform: translateY(0px);
-        background-image: url(Images/Icons/icons_1.png);
+        background-image: url("../Images/Icons/icons_2.png");
     }
     50% {
         transform: translateY(300px);
