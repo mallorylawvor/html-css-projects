@@ -1,6 +1,40 @@
-img{
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    padding: 14px 16px; 
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #a5adb0;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .navbar a:hover {
+    background: #c7dee2;
+    color: black;
+  }
+
+h1 {
+    padding-block: 75px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+img {
     filter: grayscale(30%);
 }
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
 .center {
     display: block;
     margin-left: auto;
@@ -9,6 +43,14 @@ img{
     border: 2px solid black;
     border-radius: 15px 50px 30px;
 }
+.centered {
+    position: absolute;
+    color: rgb(55, 57, 57);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
 .footer {
     text-align: center;
     font-weight: bold;
@@ -16,3 +58,42 @@ img{
     background-color: rgb(201, 209, 240);
     color: rgb(49, 47, 47);
 }
+.table, th, td {
+    border: 2px solid;
+    background-color: rgb(193, 237, 237);
+  }
+  table {
+    width: 100%;
+    padding:
+  }
+  th {
+    height: 70px;
+  }
+  td {
+    text-align: left;
+  }
+  th {
+    text-align: left;
+  }
+
+  .column {
+    float: left;
+    height: 50px;
+    width: 50%;
+    padding-top: 10px;
+    background-color: rgb(41, 101, 101);
+    color: rgb(198, 217, 231);
+    text-align: center;
+  }
+  .row:after {
+    content: "";
+  display: table;
+  clear: both;
+  }
+ 
+  .hover {
+    p:hover {
+    background-color: aquamarine;
+    }
+  }
+ 
