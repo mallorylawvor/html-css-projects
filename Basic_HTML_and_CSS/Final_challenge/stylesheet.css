@@ -96,4 +96,11 @@ img {
     background-color: aquamarine;
     }
   }
+  .video {
+    text-align: center;
+  }
  
+  .container2 {
+    position: relative;
+    text-align: center;
+    color: rgb(52, 65, 119);}
