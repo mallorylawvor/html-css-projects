@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="stylesheet.css"> 
+    <meta name="viewport" content="width=device-width"/>
 <title>Final Challenge </title>
 </head>
 <body>
@@ -12,8 +13,11 @@
       </div>
     <h1> Story of a Dog.</h1>
     <div class="container">
-        <img src="img/Dog_pic.jpeg" alt="dog" class="center"
+        <img src="img/Dog_pic.jpeg" alt="dog" class="center">
         <div class="centered">A Dogs Story</div>
+        <div class="overlay">
+          <div class="text">Mans Best Friend!</div>
+        </div>
 </div>
 
 <!--table-->
@@ -43,7 +47,35 @@
     <div class="column">Bull Terrier</div>
   </div>
 
+  <div class="container2">
+    <div class="video">
+      <video width="320" height="240" autoplay muted loop>
+      <source src="3042473-uhd_3840_2160_30fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+        <div class="centered">Puppy Overload!</div>
+    </div>
+   </div>
 <p class="hover">Dogs are the Best!</p>
+
+<div>
+  <h3>Contact Us at Story of a Dog rescue.</h3>
+  <form
+  action="https://formspree.io/f/mzzpobwn"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+</div>
 
 <footer class="footer">
     <p>Author: Mallory Lawvor</p>
