@@ -1,92 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> PDX SPA</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="CSS/styles.css"
-    </head>
-    <body>
-        <header>
-            <h1>PDX SPA</h1>
-        </header>
 
-        <!--NAV-->
-        <div id="nav">
-            <ul>
-                <a href="#massage" id="link"><li>Massage</li></a>
-                <a href="#facial" id="link"><li>Facial</li></a>
-                <a href="#nail" id="link"><li>Nails</li></a>
-            </ul>
-        </div>
-          <!--end Nav-->
+<head>
+    <title> PDX SPA</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src="JS/one_page_website.js">
+    </script>
+</head>
 
-           <!--welcome-->
-         <div id="welcome">
+<body>
+    <header>
+        <h1>PDX SPA</h1>
+    </header>
+
+    <!--NAV-->
+    <div id="nav">
+        <ul>
+            <a href="#massage" id="link">
+                <li>Massage</li>
+            </a>
+            <a href="#facial" id="link">
+                <li>Facial</li>
+            </a>
+            <a href="#nail" id="link">
+                <li>Nails</li>
+            </a>
+        </ul>
+    </div>
+    <!--end Nav-->
+
+    <!--welcome-->
+    <div id="welcome">
         <h1> Welcome to PDX SPA</h1> <br>
-        <iframe class="container" width="560" height="315" src="https://www.youtube.com/embed/SPKbgq_gKEw?si=zFt1RhjKAM9hFN6t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         </div>
-         <!--end Welcome-->
+        <iframe class="container" width="560" height="315"
+            src="https://www.youtube.com/embed/SPKbgq_gKEw?si=zFt1RhjKAM9hFN6t" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <!--end Welcome-->
 
-          <!--Massage-->
-         <div id="massage">
-            <h1> Massage</h1>
-            <div>
-                <img class="photo" src="images/massage_1.jpeg" alt="massage pic">
-            </div>
-            <div>
-                <article>
-                    <h2> Serenity Signature Massage </h2>
-                    <p> Experience pure relaxation with our signature massage, expertly tailored to your needs. Let skilled hands melt away tension and revitalize your body with a blend of soothing techniques. Surrender to the calming aroma of essential oils as stress fades away, leaving you refreshed and renewed. Treat yourself to tranquility today at PDX Spa.</p>
-                </article>
-            </div>
-         </div>
-        <!--end Massage-->
+    <!--lightbox images-->
+    <div class="row">
+        <div class="column">
+            <img src="images/facial_1.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="images/massage_1.jpeg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="images/nails_1.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+        </div>
+    </div>
 
-         <!--Facial--> 
-        <div id="facial">
-            <h1>Facials</h1>
-            <div>
-                <img class="photo " src="images/facial_1.jpeg" alt="facial pic">
+    <!--Modal/Lightbox-->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&time;</span>
+        <div class="modal-content">
+            <!--_wide.jpeg????-->
+            <div class="mySlide">
+                <div class="numbertext">Photo 1</div>
+                <img src="images/facial_1.jpeg" style="width: 100%;">
             </div>
-            <div>
-                <article>
-                    <h2> SerenityRejuvenating Facial</h2>
-                    <p>Experience rejuvenation at its finest with our luxurious facial treatment. Let our skilled estheticians customize a regimen tailored to your skin's unique needs, leaving you with a radiant complexion. Relax and indulge in the transformative power of our advanced skincare techniques. Treat yourself to luminous beauty today at PDX Spa.</p>
-                </article>
+            <div class="mySlide">
+                <div class="numbertext">Photo 2</div>
+                <img src="images/massage_1.jpeg" style="width: 100%;">
             </div>
-         </div>
-         <!--end Facial-->
+            <div class="mySlide">
+                <div class="numbertext">Photo 3</div>
+                <img src="images/nails_1.jpeg" style="width: 100%;">
+            </div>
 
-          <!--Nail-->
-         <div id="nail">
-            <h1>Nails</h1>
-            <div>
-                <img class="photo" src="images/nails_1.jpeg" alt="nail pic">
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
             </div>
-            <div>
-                <article>
-                    <h2>Serenity Deluxe Manicure</h2> 
-                    <p>Experience luxury at your fingertips with our deluxe manicure and pedicure services at Serenity Spa. Let our skilled technicians pamper your hands and feet with meticulous care, leaving you feeling refreshed and polished. Treat yourself to the ultimate nail indulgence today.</p>
-                </article>
+
+            <!-- Thumbnail image controls -->
+            <div class="column">
+                <img class="demo" src="images/facial_1.jpeg" onclick="currentSlide(1)" alt="Facial">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="images/massage_1.jpeg" onclick="currentSlide(2)" alt="Massage">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="images/nails_1.jpeg" onclick="currentSlide(3)" alt="Nails">
             </div>
         </div>
-        <!--end Nail-->
+    </div>
+    <!--end light box-->
 
-       <!--Request APP-->
-        <div id="Appointment">
-      <h1> Request an Appointment Today.</h1>
-      <div>
-        <form action="" method="">
-            First Name:<input type="text" name="First_Name"><br>
-            Last Name:<input type="text" name="Last_Name"><br>
-            Phone:<input type="text" name="Phone"><br>
-            Email:<input type="email" name="Email"><br>
-            Appointment Requested:<input type="text" name="Appointment"><br>
-            <input type="submit" value="submit"> 
-        </form>
-      </div>
+
+
+
+    <!--Massage-->
+    <div id="massage">
+        <h1> Massage</h1>
+        <div>
+            <img class="photo" src="images/massage_1.jpeg" alt="massage pic">
         </div>
-        <!--end Request App-->
+        <div>
+            <article>
+                <h2> Serenity Signature Massage </h2>
+                <p> Experience pure relaxation with our signature massage, expertly tailored to your needs. Let
+                    skilled
+                    hands melt away tension and revitalize your body with a blend of soothing techniques. Surrender
+                    to
+                    the calming aroma of essential oils as stress fades away, leaving you refreshed and renewed.
+                    Treat
+                    yourself to tranquility today at PDX Spa.</p>
+            </article>
+        </div>
+    </div>
+    <!--end Massage-->
+
+    <!--Facial-->
+    <div id="facial">
+        <h1>Facials</h1>
+        <div>
+            <img class="photo " src="images/facial_1.jpeg" alt="facial pic">
+        </div>
+        <div>
+            <article>
+                <h2> SerenityRejuvenating Facial</h2>
+                <p>Experience rejuvenation at its finest with our luxurious facial treatment. Let our skilled
+                    estheticians customize a regimen tailored to your skin's unique needs, leaving you with a
+                    radiant
+                    complexion. Relax and indulge in the transformative power of our advanced skincare techniques.
+                    Treat
+                    yourself to luminous beauty today at PDX Spa.</p>
+            </article>
+        </div>
+    </div>
+    <!--end Facial-->
+
+    <!--Nail-->
+    <div id="nail">
+        <h1>Nails</h1>
+        <div>
+            <img class="photo" src="images/nails_1.jpeg" alt="nail pic">
+        </div>
+        <div>
+            <article>
+                <h2>Serenity Deluxe Manicure</h2>
+                <p>Experience luxury at your fingertips with our deluxe manicure and pedicure services at Serenity
+                    Spa.
+                    Let our skilled technicians pamper your hands and feet with meticulous care, leaving you feeling
+                    refreshed and polished. Treat yourself to the ultimate nail indulgence today.</p>
+            </article>
+        </div>
+    </div>
+    <!--end Nail-->
+
+    <!--Request APP-->
+    <div id="Appointment">
+        <h1> Request an Appointment Today.</h1>
+        <div>
+            <form action="" method="">
+                First Name:<input type="text" name="First_Name"><br>
+                Last Name:<input type="text" name="Last_Name"><br>
+                Phone:<input type="text" name="Phone"><br>
+                Email:<input type="email" name="Email"><br>
+                Appointment Requested:<input type="text" name="Appointment"><br>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </div>
+    <!--end Request App-->
 
     <div>
         <footer>
@@ -94,5 +181,6 @@
         </footer>
     </div>
 
-    </body>
+</body>
+
 </html>
